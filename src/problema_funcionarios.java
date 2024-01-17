@@ -9,18 +9,22 @@ public class problema_funcionarios {
 
         funcionarios funcionarios = new funcionarios();
 
-        System.out.print("nome: ");
+        System.out.print("Nome: ");
         funcionarios.Name = sc.nextLine();
 
-        System.out.print("Salário Bruto: ");
+        System.out.print("Salário bruto: ");
         funcionarios.GrossSalary = sc.nextDouble();
 
-        System.out.print("imposto: ");
+        System.out.print("Imposto: ");
         funcionarios.Tax = sc.nextDouble();
 
-        funcionarios.NetSalary();
-        System.out.println("Funcionario: " + funcionarios.toString());
+        funcionarios.netSalary();
+        System.out.println("Funcionário: " + funcionarios.toString());
 
-        System.out.println("qual a porcentagem pra aumentar o salário? ");
+        System.out.println("Qual a porcentagem para aumentar o salário? ");
+        double L = sc.nextDouble();
+        funcionarios.IncreaseSalary(L);
+
+        System.out.println("Dados atualizados: " + funcionarios.toString());
     }
 }

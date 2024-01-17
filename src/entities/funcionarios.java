@@ -5,15 +5,15 @@ public class funcionarios {
     public double GrossSalary;
     public double Tax;
 
-    public double NetSalary(){
-        GrossSalary = GrossSalary - Tax;
+    public double netSalary() {
+        return GrossSalary - Tax;
     }
 
-    public double IncreaseSalary(double percentage){
-        GrossSalary += GrossSalary*(percentage/100);
+    public void IncreaseSalary(double percentage){
+        GrossSalary += GrossSalary * percentage / 100;
     }
 
     public String toString(){
-        return Name + ", " + GrossSalary;
+        return Name + ", $" + String.format("%.2f,",netSalary());
     }
 }
