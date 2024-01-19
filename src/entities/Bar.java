@@ -8,27 +8,25 @@ public class Bar {
 
     public static double ticket(){
         if (gender=='F' || gender=='f'){
-            double ticket;
-            return ticket = 8;
+            return 8;
         }else {
-            double ticket;
-            return ticket = 10;
+            return 10;
         }
     }
 
     public static double feeding(){
-        beer *= 5;
-        softDrink *= 3;
-        barbecue *= 7;
-        return beer+softDrink+barbecue;
+        return beer*5+softDrink*3+barbecue*7;
     }
 
     public static double cover(){
-        double couvert;
-        return couvert = 4.00;
+        if(feeding()>30){
+            return 0;
+        }else{
+           return 4.00;
+        }
     }
 
     public static double total(){
-        return cover()+feeding()+ticket();
+        return feeding()+ticket()+cover();
     }
 }
